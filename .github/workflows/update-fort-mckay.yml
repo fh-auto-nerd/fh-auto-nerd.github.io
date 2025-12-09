@@ -1,10 +1,8 @@
-name: Update Fort McKay Weather XML
+name: Update Fort McKay / Mildred Lake Weather XML
 
 on:
   schedule:
-    # Every hour (UTC)
-    - cron: "0 * * * *"
-  # Allow manual run from the Actions tab
+    - cron: "0 * * * *"   # every hour
   workflow_dispatch: {}
 
 jobs:
@@ -15,21 +13,23 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Fetch latest Fort McKay XML
+      - name: Fetch latest Mildred Lake XML
         run: |
+          set -e
           BASE_DIR_URL="https://hpfx.collab.science.gc.ca/today/citypage_weather/AB/01/"
-          SITE_CODE="s0000523"
+          SITE_CODE="s0000523"   # Mildred Lake
           LANG="en"
 
-          # Get directory listing
+          echo "Fetching index from $BASE_DIR_URL"
           curl -s "$BASE_DIR_URL" -o index.html
 
-          # Extract matching filenames
-          # Example: 20251208T010102.829Z_MSC_CitypageWeather_s0000523_en.xml
+          echo "Searching for files for $SITE_CODE..."
           FILE=$(grep -oE "[0-9TZ\.]+_MSC_CitypageWeather_${SITE_CODE}_${LANG}\.xml" index.html | sort | tail -n 1)
 
           if [ -z "$FILE" ]; then
-            echo "No matching CitypageWeather files found"
+            echo "No matching CitypageWeather files found for ${SITE_CODE}"
+            echo "Dumping first few lines of index.html for debugging:"
+            head index.html || true
             exit 1
           fi
 
@@ -52,5 +52,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           git add fort_mckay.xml
-          git commit -m "Update Fort McKay XML"
+          git commit -m "Update Mildred Lake (s0000523) XML"
           git push
