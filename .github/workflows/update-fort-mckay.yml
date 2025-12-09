@@ -18,14 +18,14 @@ jobs:
       - name: Fetch latest Fort McKay XML
         run: |
           BASE_DIR_URL="https://hpfx.collab.science.gc.ca/today/citypage_weather/AB/01/"
-          SITE_CODE="s0000637"
+          SITE_CODE="s0000523"
           LANG="en"
 
           # Get directory listing
           curl -s "$BASE_DIR_URL" -o index.html
 
           # Extract matching filenames
-          # Example: 20251208T010102.829Z_MSC_CitypageWeather_s0000637_en.xml
+          # Example: 20251208T010102.829Z_MSC_CitypageWeather_s0000523_en.xml
           FILE=$(grep -oE "[0-9TZ\.]+_MSC_CitypageWeather_${SITE_CODE}_${LANG}\.xml" index.html | sort | tail -n 1)
 
           if [ -z "$FILE" ]; then
