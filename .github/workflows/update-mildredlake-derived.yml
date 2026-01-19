@@ -1,0 +1,47 @@
+- name: Generate derived XML (wind chill)
+        run: |
+          python3 - << 'PY'
+import xml.etree.ElementTree as ET
+from datetime import datetime, timezone
+import math
+
+src = "data/mildredlake_swob.xml"
+out = "data/mildredlake_derived.xml"
+
+tree = ET.parse(src)
+root = tree.getroot()
+
+def find_value(name):
+    for el in root.iter():
+        if el.tag.endswith("element") and el.attrib.get("name") == name:
+            v = el.attrib.get("value")
+            uom = el.attrib.get("uom","")
+            return (float(v) if v is not None else None), uom
+    return None, ""
+
+T, _ = find_value("air_temp")
+V, uom = find_value("avg_wnd_spd_10m_pst10mts")
+
+# Convert wind speed to km/h if needed (usually m/s)
+V_kmh = V * 3.6 if V is not None and ("m/s" in (uom or "").lower() or "ms-1" in (uom or "").lower()) else V
+
+# Wind chill formula (valid when T<=10C and V>=4.8 km/h)
+WCI = None
+if T is not None and V_kmh is not None:
+    if T <= 10 and V_kmh >= 4.8:
+        v16 = V_kmh ** 0.16
+        WCI = 13.12 + 0.6215*T - 11.37*v16 + 0.3965*T*v16
+    else:
+        WCI = T
+
+now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+xml = f'''<?xml version="1.0" encoding="UTF-8"?>
+<derivedWeather station="CWMX-AUTO" generatedUtc="{now}">
+  <airTempC>{T:.1f if T is not None else 0}</airTempC>
+  <windSpeedKmh>{V_kmh:.1f if V_kmh is not None else 0}</windSpeedKmh>
+  <windChillC>{WCI:.1f if WCI is not None else 0}</windChillC>
+</derivedWeather>
+'''
+with open(out, "w", encoding="utf-8") as fConfirm:
+    fConfirm.write(xml)
+PY
