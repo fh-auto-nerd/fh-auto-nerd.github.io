@@ -65,7 +65,7 @@ jobs:
             '''
             with open(out, "w", encoding="utf-8") as fConfirm:
                 fConfirm.write(xml)
-            PY
+            'PY'
 
       - name: Commit & push if changed
         run: |
