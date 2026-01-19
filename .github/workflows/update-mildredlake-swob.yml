@@ -1,76 +1,103 @@
-name: Update Mildred Lake SWOB (CWMX)
+name: Update Mildred Lake SWOB + Derived (Wind Chill)
 
 on:
   schedule:
-    # hourly (at minute 7)
-    - cron: "7 * * * *"
-  workflow_dispatch:
+    - cron: "7 * * * *"   # hourly (UTC)
+  workflow_dispatch: {}
 
 jobs:
   update:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Download Mildred Lake SWOB XML
         run: |
+          set -e
           mkdir -p data
-          curl -fsSL "https://dd.weather.gc.ca/today/observations/swob-ml/latest/CWMX-AUTO-swob.xml" \
+          curl -fsSL --retry 5 --retry-delay 5 --retry-all-errors --connect-timeout 20 --max-time 120 \
+            "https://dd.weather.gc.ca/today/observations/swob-ml/latest/CWMX-AUTO-swob.xml" \
             -o "data/mildredlake_swob.xml"
 
       - name: Generate derived XML (wind chill)
         run: |
           python3 - << 'PY'
-            import xml.etree.ElementTree as ET
-            from datetime import datetime, timezone
-            import math
-            
-            src = "data/mildredlake_swob.xml"
-            out = "data/mildredlake_derived.xml"
-            
-            tree = ET.parse(src)
-            root = tree.getroot()
-            
-            def find_value(name):
-                for el in root.iter():
-                    if el.tag.endswith("element") and el.attrib.get("name") == name:
-                        v = el.attrib.get("value")
-                        uom = el.attrib.get("uom","")
-                        return (float(v) if v is not None else None), uom
-                return None, ""
-            
-            T, _ = find_value("air_temp")
-            V, uom = find_value("avg_wnd_spd_10m_pst10mts")
-            
-            # Convert wind speed to km/h if needed (usually m/s)
-            V_kmh = V * 3.6 if V is not None and ("m/s" in (uom or "").lower() or "ms-1" in (uom or "").lower()) else V
-            
-            # Wind chill formula (valid when T<=10C and V>=4.8 km/h)
-            WCI = None
-            if T is not None and V_kmh is not None:
-                if T <= 10 and V_kmh >= 4.8:
-                    v16 = V_kmh ** 0.16
-                    WCI = 13.12 + 0.6215*T - 11.37*v16 + 0.3965*T*v16
-                else:
-                    WCI = T
-            
-            now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-            xml = f'''<?xml version="1.0" encoding="UTF-8"?>
-            <derivedWeather station="CWMX-AUTO" generatedUtc="{now}">
-              <airTempC>{T:.1f if T is not None else 0}</airTempC>
-              <windSpeedKmh>{V_kmh:.1f if V_kmh is not None else 0}</windSpeedKmh>
-              <windChillC>{WCI:.1f if WCI is not None else 0}</windChillC>
-            </derivedWeather>
-            '''
-            with open(out, "w", encoding="utf-8") as fConfirm:
-                fConfirm.write(xml)
-            'PY'
+          import xml.etree.ElementTree as ET
+          from datetime import datetime, timezone
+          import math
 
-      - name: Commit & push if changed
+          src = "data/mildredlake_swob.xml"
+          out = "data/mildredlake_derived.xml"
+
+          tree = ET.parse(src)
+          root = tree.getroot()
+
+          def find_value(name):
+              for el in root.iter():
+                  if el.tag.endswith("element") and el.attrib.get("name") == name:
+                      v = el.attrib.get("value")
+                      uom = el.attrib.get("uom", "")
+                      return (float(v) if v is not None else None), uom
+              return None, ""
+
+          # Use the element names you confirmed in EBO
+          T, _ = find_value("air_temp")
+          V, uom = find_value("avg_wnd_spd_10m_pst10mts")
+
+          # If either value is missing, still write a file so you can see the issue
+          now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+          def write_xml(t=None, v_kmh=None, wci=None, note=None):
+              lines = []
+              lines.append('<?xml version="1.0" encoding="UTF-8"?>')
+              lines.append(f'<derivedWeather station="CWMX-AUTO" generatedUtc="{now}">')
+              if note:
+                  lines.append(f'  <note>{note}</note>')
+              if t is not None:
+                  lines.append(f'  <airTempC>{t:.1f}</airTempC>')
+              if v_kmh is not None:
+                  lines.append(f'  <windSpeedKmh>{v_kmh:.1f}</windSpeedKmh>')
+              if wci is not None:
+                  lines.append(f'  <windChillC>{wci:.1f}</windChillC>')
+              lines.append('</derivedWeather>')
+              with open(out, "w", encoding="utf-8") as f:
+                  f.write("\n".join(lines) + "\n")
+
+          if T is None or V is None:
+              missing = []
+              if T is None:
+                  missing.append("air_temp")
+              if V is None:
+                  missing.append("avg_wnd_spd_10m_pst10mts")
+              write_xml(t=T, v_kmh=None, wci=None, note="Missing: " + ",".join(missing))
+              raise SystemExit(0)
+
+          # Convert wind speed to km/h if units indicate m/s
+          uom_l = (uom or "").lower()
+          V_kmh = V * 3.6 if ("m/s" in uom_l or "ms-1" in uom_l) else V
+
+          # Wind chill (valid when T <= 10°C and V >= 4.8 km/h)
+          if T <= 10 and V_kmh >= 4.8:
+              v16 = V_kmh ** 0.16
+              WCI = 13.12 + 0.6215 * T - 11.37 * v16 + 0.3965 * T * v16
+          else:
+              WCI = T
+
+          write_xml(t=T, v_kmh=V_kmh, wci=WCI)
+          PY
+
+      - name: Commit and push if changed
         run: |
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/mildredlake_swob.xml
-          git commit -m "Update Mildred Lake SWOB" || echo "No changes"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add data/mildredlake_swob.xml data/mildredlake_derived.xml
+          git commit -m "Update Mildred Lake SWOB + derived"
           git push
