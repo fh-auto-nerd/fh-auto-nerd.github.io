@@ -6,18 +6,18 @@
       <month name="January">01</month>
       <day name="Thursday">22</day>
       <hour>01</hour>
-      <minute>02</minute>
-      <timeStamp>20260122010201</timeStamp>
-      <textSummary>Thursday January 22, 2026 at 01:02 UTC</textSummary>
+      <minute>46</minute>
+      <timeStamp>20260122014617</timeStamp>
+      <textSummary>Thursday January 22, 2026 at 01:46 UTC</textSummary>
    </dateTime>
    <dateTime name="xmlCreation" zone="MST" UTCOffset="-7">
       <year>2026</year>
       <month name="January">01</month>
       <day name="Wednesday">21</day>
       <hour>18</hour>
-      <minute>02</minute>
-      <timeStamp>20260121180201</timeStamp>
-      <textSummary>Wednesday January 21, 2026 at 18:02 MST</textSummary>
+      <minute>46</minute>
+      <timeStamp>20260121184617</timeStamp>
+      <textSummary>Wednesday January 21, 2026 at 18:46 MST</textSummary>
    </dateTime>
    <location>
       <continent>North America</continent>
@@ -65,20 +65,20 @@
       <dateTime name="forecastIssue" zone="UTC" UTCOffset="0">
          <year>2026</year>
          <month name="January">01</month>
-         <day name="Wednesday">21</day>
-         <hour>23</hour>
-         <minute>00</minute>
-         <timeStamp>20260121230000</timeStamp>
-         <textSummary>Wednesday January 21, 2026 at 23:00 UTC</textSummary>
+         <day name="Thursday">22</day>
+         <hour>01</hour>
+         <minute>44</minute>
+         <timeStamp>20260122014400</timeStamp>
+         <textSummary>Thursday January 22, 2026 at 01:44 UTC</textSummary>
       </dateTime>
       <dateTime name="forecastIssue" zone="MST" UTCOffset="-7">
          <year>2026</year>
          <month name="January">01</month>
          <day name="Wednesday">21</day>
-         <hour>16</hour>
-         <minute>00</minute>
-         <timeStamp>20260121160000</timeStamp>
-         <textSummary>Wednesday January 21, 2026 at 16:00 MST</textSummary>
+         <hour>18</hour>
+         <minute>44</minute>
+         <timeStamp>20260121184400</timeStamp>
+         <textSummary>Wednesday January 21, 2026 at 18:44 MST</textSummary>
       </dateTime>
       <regionalNormals>
          <textSummary>Low minus 24. High minus 13.</textSummary>
@@ -87,14 +87,14 @@
       </regionalNormals>
       <forecast>
          <period textForecastName="Tonight">Wednesday night</period>
-         <textSummary>Mainly cloudy with 30 percent chance of flurries early this evening. Clearing late this evening. Wind north 20 km/h becoming light late this evening. Low minus 30. Wind chill minus 28 this evening and minus 42 overnight. Frostbite in minutes.</textSummary>
+         <textSummary>Clearing this evening. Wind north 20 km/h becoming light late this evening. Low minus 30. Wind chill minus 30 this evening and minus 42 overnight. Frostbite in minutes.</textSummary>
          <cloudPrecip>
-            <textSummary>Mainly cloudy with 30 percent chance of flurries early this evening. Clearing late this evening.</textSummary>
+            <textSummary>Clearing this evening.</textSummary>
          </cloudPrecip>
          <abbreviatedForecast>
-            <iconCode format="gif">38</iconCode>
-            <pop units="%">30</pop>
-            <textSummary>Chance of flurries</textSummary>
+            <iconCode format="gif">35</iconCode>
+            <pop units="%"></pop>
+            <textSummary>Clearing</textSummary>
          </abbreviatedForecast>
          <temperatures>
             <textSummary>Low minus 30.</textSummary>
@@ -117,12 +117,12 @@
          </winds>
          <precipitation>
             <textSummary/>
-            <precipType start="23" end="28">snow</precipType>
+            <precipType start="" end=""/>
          </precipitation>
          <snowLevel/>
          <windChill>
-            <textSummary>Wind chill minus 28 this evening and minus 42 overnight. Frostbite in minutes.</textSummary>
-            <calculated index="1" unitType="metric" class="evening">-28</calculated>
+            <textSummary>Wind chill minus 30 this evening and minus 42 overnight. Frostbite in minutes.</textSummary>
+            <calculated index="1" unitType="metric" class="evening">-30</calculated>
             <calculated index="2" unitType="metric" class="overnight">-42</calculated>
             <frostbite>Frostbite in minutes</frostbite>
          </windChill>
@@ -444,26 +444,26 @@
       <dateTime name="forecastIssue" zone="UTC" UTCOffset="0">
          <year>2026</year>
          <month name="January">01</month>
-         <day name="Wednesday">21</day>
-         <hour>23</hour>
-         <minute>00</minute>
-         <timeStamp>20260121230000</timeStamp>
-         <textSummary>Wednesday January 21, 2026 at 23:00 UTC</textSummary>
+         <day name="Thursday">22</day>
+         <hour>01</hour>
+         <minute>44</minute>
+         <timeStamp>20260122014400</timeStamp>
+         <textSummary>Thursday January 22, 2026 at 01:44 UTC</textSummary>
       </dateTime>
       <dateTime name="forecastIssue" zone="MST" UTCOffset="-7">
          <year>2026</year>
          <month name="January">01</month>
          <day name="Wednesday">21</day>
-         <hour>16</hour>
-         <minute>00</minute>
-         <timeStamp>20260121160000</timeStamp>
-         <textSummary>Wednesday January 21, 2026 at 16:00 MST</textSummary>
+         <hour>18</hour>
+         <minute>44</minute>
+         <timeStamp>20260121184400</timeStamp>
+         <textSummary>Wednesday January 21, 2026 at 18:44 MST</textSummary>
       </dateTime>
       <hourlyForecast dateTimeUTC="202601220200">
-         <condition>Chance of flurries</condition>
-         <iconCode format="png">38</iconCode>
+         <condition>Partly cloudy</condition>
+         <iconCode format="png">32</iconCode>
          <temperature unitType="metric" units="C">-20</temperature>
-         <lop category="Low" units="%">30</lop>
+         <lop category="Nil" units="%">0</lop>
          <windChill unitType="metric">-30</windChill>
          <humidex unitType="metric"/>
          <wind>
@@ -473,10 +473,10 @@
          </wind>
       </hourlyForecast>
       <hourlyForecast dateTimeUTC="202601220300">
-         <condition>Chance of flurries</condition>
-         <iconCode format="png">38</iconCode>
+         <condition>A few clouds</condition>
+         <iconCode format="png">31</iconCode>
          <temperature unitType="metric" units="C">-20</temperature>
-         <lop category="Low" units="%">30</lop>
+         <lop category="Nil" units="%">0</lop>
          <windChill unitType="metric">-30</windChill>
          <humidex unitType="metric"/>
          <wind>
@@ -486,8 +486,8 @@
          </wind>
       </hourlyForecast>
       <hourlyForecast dateTimeUTC="202601220400">
-         <condition>Partly cloudy</condition>
-         <iconCode format="png">32</iconCode>
+         <condition>Clear</condition>
+         <iconCode format="png">30</iconCode>
          <temperature unitType="metric" units="C">-21</temperature>
          <lop category="Nil" units="%">0</lop>
          <windChill unitType="metric">-32</windChill>
@@ -499,8 +499,8 @@
          </wind>
       </hourlyForecast>
       <hourlyForecast dateTimeUTC="202601220500">
-         <condition>A few clouds</condition>
-         <iconCode format="png">31</iconCode>
+         <condition>Clear</condition>
+         <iconCode format="png">30</iconCode>
          <temperature unitType="metric" units="C">-22</temperature>
          <lop category="Nil" units="%">0</lop>
          <windChill unitType="metric">-33</windChill>
