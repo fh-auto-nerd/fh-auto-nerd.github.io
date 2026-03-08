@@ -4,20 +4,20 @@
    <dateTime name="xmlCreation" zone="UTC" UTCOffset="0">
       <year>2026</year>
       <month name="March">03</month>
-      <day name="Saturday">07</day>
+      <day name="Sunday">08</day>
       <hour>01</hour>
       <minute>05</minute>
-      <timeStamp>20260307010505</timeStamp>
-      <textSummary>Saturday March 07, 2026 at 01:05 UTC</textSummary>
+      <timeStamp>20260308010503</timeStamp>
+      <textSummary>Sunday March 08, 2026 at 01:05 UTC</textSummary>
    </dateTime>
    <dateTime name="xmlCreation" zone="MST" UTCOffset="-7">
       <year>2026</year>
       <month name="March">03</month>
-      <day name="Friday">06</day>
+      <day name="Saturday">07</day>
       <hour>18</hour>
       <minute>05</minute>
-      <timeStamp>20260306180505</timeStamp>
-      <textSummary>Friday March 06, 2026 at 18:05 MST</textSummary>
+      <timeStamp>20260307180503</timeStamp>
+      <textSummary>Saturday March 07, 2026 at 18:05 MST</textSummary>
    </dateTime>
    <location>
       <continent>North America</continent>
@@ -26,39 +26,60 @@
       <name code="s0000523" lat="57.19N" lon="111.64W">Mildred Lake</name>
       <region/>
    </location>
-   <warnings/>
+   <warnings>
+      <event type="warning" alertColourLevel="yellow" description="YELLOW WARNING - SNOWFALL" expiryTime="20260308143302" url="#911593271319025078202603070501">
+         <dateTime name="eventIssue" zone="UTC" UTCOffset="0">
+            <year>2026</year>
+            <month name="March">03</month>
+            <day name="Saturday">07</day>
+            <hour>22</hour>
+            <minute>33</minute>
+            <timeStamp>20260307223302</timeStamp>
+            <textSummary>Saturday March 07, 2026 at 22:33 UTC</textSummary>
+         </dateTime>
+         <dateTime name="eventIssue" zone="MST" UTCOffset="-7">
+            <year>2026</year>
+            <month name="March">03</month>
+            <day name="Saturday">07</day>
+            <hour>15</hour>
+            <minute>33</minute>
+            <timeStamp>20260307153302</timeStamp>
+            <textSummary>Saturday March 07, 2026 at 15:33 MST</textSummary>
+         </dateTime>
+      </event>
+   </warnings>
    <currentConditions>
       <station code="wmx" lat="57.04N" lon="111.56W">Mildred Lake</station>
       <dateTime name="observation" zone="UTC" UTCOffset="0">
          <year>2026</year>
          <month name="March">03</month>
-         <day name="Saturday">07</day>
+         <day name="Sunday">08</day>
          <hour>01</hour>
          <minute>00</minute>
-         <timeStamp>20260307010000</timeStamp>
-         <textSummary>Saturday March 07, 2026 at 01:00 UTC</textSummary>
+         <timeStamp>20260308010000</timeStamp>
+         <textSummary>Sunday March 08, 2026 at 01:00 UTC</textSummary>
       </dateTime>
       <dateTime name="observation" zone="MST" UTCOffset="-7">
          <year>2026</year>
          <month name="March">03</month>
-         <day name="Friday">06</day>
+         <day name="Saturday">07</day>
          <hour>18</hour>
          <minute>00</minute>
-         <timeStamp>20260306180000</timeStamp>
-         <textSummary>Friday March 06, 2026 at 18:00 MST</textSummary>
+         <timeStamp>20260307180000</timeStamp>
+         <textSummary>Saturday March 07, 2026 at 18:00 MST</textSummary>
       </dateTime>
       <condition></condition>
       <iconCode format="gif"/>
-      <temperature unitType="metric" units="C" qaValue="100">-14.8</temperature>
-      <dewpoint unitType="metric" units="C">-21.7</dewpoint>
-      <windChill unitType="metric" qaValue="100">-20</windChill>
-      <pressure unitType="metric" units="kPa" change="0.14" tendency="falling">101.8</pressure>
-      <relativeHumidity units="%" qaValue="100">56</relativeHumidity>
+      <temperature unitType="metric" units="C" qaValue="100">-12.2</temperature>
+      <dewpoint unitType="metric" units="C">-16.2</dewpoint>
+      <windChill unitType="metric" qaValue="100">-19</windChill>
+      <pressure unitType="metric" units="kPa" change="0.28" tendency="rising">99.9</pressure>
+      <relativeHumidity units="%" qaValue="100">72</relativeHumidity>
       <wind>
-         <speed unitType="metric" units="km/h" qaValue="100">7</speed>
+         <speed unitType="metric" units="km/h" qaValue="100">14</speed>
          <gust unitType="metric" units="km/h"></gust>
-         <direction qaValue="100">NNW</direction>
-         <bearing units="degrees" qaValue="100">340.5</bearing>
+         <direction qaValue="100">NNE</direction>
+         <bearing units="degrees" qaValue="100">14.2</bearing>
       </wind>
    </currentConditions>
    <forecastGroup>
@@ -76,38 +97,38 @@
       <dateTime name="sunrise" zone="UTC" UTCOffset="0">
          <year>2026</year>
          <month name="March">03</month>
-         <day name="Saturday">07</day>
+         <day name="Sunday">08</day>
          <hour>14</hour>
-         <minute>04</minute>
-         <timeStamp>20260307140400</timeStamp>
-         <textSummary>Saturday March 07, 2026 at 14:04 UTC</textSummary>
+         <minute>02</minute>
+         <timeStamp>20260308140200</timeStamp>
+         <textSummary>Sunday March 08, 2026 at 14:02 UTC</textSummary>
       </dateTime>
       <dateTime name="sunrise" zone="MST" UTCOffset="-7">
          <year>2026</year>
          <month name="March">03</month>
-         <day name="Friday">06</day>
+         <day name="Saturday">07</day>
          <hour>07</hour>
-         <minute>07</minute>
-         <timeStamp>20260306070700</timeStamp>
-         <textSummary>Friday March 06, 2026 at 07:07 MST</textSummary>
+         <minute>04</minute>
+         <timeStamp>20260307070400</timeStamp>
+         <textSummary>Saturday March 07, 2026 at 07:04 MST</textSummary>
       </dateTime>
       <dateTime name="sunset" zone="UTC" UTCOffset="0">
          <year>2026</year>
          <month name="March">03</month>
-         <day name="Sunday">08</day>
+         <day name="Monday">09</day>
          <hour>01</hour>
-         <minute>12</minute>
-         <timeStamp>20260308011200</timeStamp>
-         <textSummary>Sunday March 08, 2026 at 01:12 UTC</textSummary>
+         <minute>14</minute>
+         <timeStamp>20260309011400</timeStamp>
+         <textSummary>Monday March 09, 2026 at 01:14 UTC</textSummary>
       </dateTime>
       <dateTime name="sunset" zone="MST" UTCOffset="-7">
          <year>2026</year>
          <month name="March">03</month>
-         <day name="Friday">06</day>
+         <day name="Saturday">07</day>
          <hour>18</hour>
-         <minute>10</minute>
-         <timeStamp>20260306181000</timeStamp>
-         <textSummary>Friday March 06, 2026 at 18:10 MST</textSummary>
+         <minute>12</minute>
+         <timeStamp>20260307181200</timeStamp>
+         <textSummary>Saturday March 07, 2026 at 18:12 MST</textSummary>
       </dateTime>
    </riseSet>
 </siteData>
