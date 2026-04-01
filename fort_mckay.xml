@@ -3,21 +3,21 @@
    <license>https://dd.weather.gc.ca/doc/LICENCE_GENERAL.txt</license>
    <dateTime name="xmlCreation" zone="UTC" UTCOffset="0">
       <year>2026</year>
-      <month name="March">03</month>
-      <day name="Tuesday">31</day>
+      <month name="April">04</month>
+      <day name="Wednesday">01</day>
       <hour>01</hour>
       <minute>05</minute>
-      <timeStamp>20260331010501</timeStamp>
-      <textSummary>Tuesday March 31, 2026 at 01:05 UTC</textSummary>
+      <timeStamp>20260401010508</timeStamp>
+      <textSummary>Wednesday April 01, 2026 at 01:05 UTC</textSummary>
    </dateTime>
    <dateTime name="xmlCreation" zone="MDT" UTCOffset="-6">
       <year>2026</year>
       <month name="March">03</month>
-      <day name="Monday">30</day>
+      <day name="Tuesday">31</day>
       <hour>19</hour>
       <minute>05</minute>
-      <timeStamp>20260330190501</timeStamp>
-      <textSummary>Monday March 30, 2026 at 19:05 MDT</textSummary>
+      <timeStamp>20260331190508</timeStamp>
+      <textSummary>Tuesday March 31, 2026 at 19:05 MDT</textSummary>
    </dateTime>
    <location>
       <continent>North America</continent>
@@ -31,34 +31,33 @@
       <station code="wmx" lat="57.04N" lon="111.56W">Mildred Lake</station>
       <dateTime name="observation" zone="UTC" UTCOffset="0">
          <year>2026</year>
-         <month name="March">03</month>
-         <day name="Tuesday">31</day>
+         <month name="April">04</month>
+         <day name="Wednesday">01</day>
          <hour>01</hour>
          <minute>00</minute>
-         <timeStamp>20260331010000</timeStamp>
-         <textSummary>Tuesday March 31, 2026 at 01:00 UTC</textSummary>
+         <timeStamp>20260401010000</timeStamp>
+         <textSummary>Wednesday April 01, 2026 at 01:00 UTC</textSummary>
       </dateTime>
       <dateTime name="observation" zone="MDT" UTCOffset="-6">
          <year>2026</year>
          <month name="March">03</month>
-         <day name="Monday">30</day>
+         <day name="Tuesday">31</day>
          <hour>19</hour>
          <minute>00</minute>
-         <timeStamp>20260330190000</timeStamp>
-         <textSummary>Monday March 30, 2026 at 19:00 MDT</textSummary>
+         <timeStamp>20260331190000</timeStamp>
+         <textSummary>Tuesday March 31, 2026 at 19:00 MDT</textSummary>
       </dateTime>
       <condition></condition>
       <iconCode format="gif"/>
-      <temperature unitType="metric" units="C" qaValue="100">-3.7</temperature>
-      <dewpoint unitType="metric" units="C">-31.2</dewpoint>
-      <windChill unitType="metric" qaValue="100">-6</windChill>
-      <pressure unitType="metric" units="kPa" change="0.04" tendency="falling">102.2</pressure>
-      <relativeHumidity units="%" qaValue="100">10</relativeHumidity>
+      <temperature unitType="metric" units="C" qaValue="100">1.4</temperature>
+      <dewpoint unitType="metric" units="C">-27.9</dewpoint>
+      <pressure unitType="metric" units="kPa" change="0.01" tendency="falling">101.6</pressure>
+      <relativeHumidity units="%" qaValue="100">9</relativeHumidity>
       <wind>
-         <speed unitType="metric" units="km/h" qaValue="100">5</speed>
+         <speed unitType="metric" units="km/h" qaValue="100">13</speed>
          <gust unitType="metric" units="km/h"></gust>
-         <direction qaValue="100">SE</direction>
-         <bearing units="degrees" qaValue="100">137.8</bearing>
+         <direction qaValue="100">N</direction>
+         <bearing units="degrees" qaValue="100">350.1</bearing>
       </wind>
    </currentConditions>
    <forecastGroup>
@@ -75,39 +74,39 @@
       <disclaimer>The information provided here, for the times of the rise and set of the sun, is an estimate included as a convenience to our clients. Values shown here may differ from the official sunrise/sunset data available from (http://hia-iha.nrc-cnrc.gc.ca/sunrise_e.html)</disclaimer>
       <dateTime name="sunrise" zone="UTC" UTCOffset="0">
          <year>2026</year>
-         <month name="March">03</month>
-         <day name="Tuesday">31</day>
+         <month name="April">04</month>
+         <day name="Wednesday">01</day>
          <hour>12</hour>
-         <minute>59</minute>
-         <timeStamp>20260331125900</timeStamp>
-         <textSummary>Tuesday March 31, 2026 at 12:59 UTC</textSummary>
+         <minute>56</minute>
+         <timeStamp>20260401125600</timeStamp>
+         <textSummary>Wednesday April 01, 2026 at 12:56 UTC</textSummary>
       </dateTime>
       <dateTime name="sunrise" zone="MDT" UTCOffset="-6">
          <year>2026</year>
          <month name="March">03</month>
-         <day name="Monday">30</day>
-         <hour>07</hour>
-         <minute>01</minute>
-         <timeStamp>20260330070100</timeStamp>
-         <textSummary>Monday March 30, 2026 at 07:01 MDT</textSummary>
+         <day name="Tuesday">31</day>
+         <hour>06</hour>
+         <minute>59</minute>
+         <timeStamp>20260331065900</timeStamp>
+         <textSummary>Tuesday March 31, 2026 at 06:59 MDT</textSummary>
       </dateTime>
       <dateTime name="sunset" zone="UTC" UTCOffset="0">
          <year>2026</year>
          <month name="April">04</month>
-         <day name="Wednesday">01</day>
+         <day name="Thursday">02</day>
          <hour>02</hour>
-         <minute>04</minute>
-         <timeStamp>20260401020400</timeStamp>
-         <textSummary>Wednesday April 01, 2026 at 02:04 UTC</textSummary>
+         <minute>06</minute>
+         <timeStamp>20260402020600</timeStamp>
+         <textSummary>Thursday April 02, 2026 at 02:06 UTC</textSummary>
       </dateTime>
       <dateTime name="sunset" zone="MDT" UTCOffset="-6">
          <year>2026</year>
          <month name="March">03</month>
-         <day name="Monday">30</day>
+         <day name="Tuesday">31</day>
          <hour>20</hour>
-         <minute>02</minute>
-         <timeStamp>20260330200200</timeStamp>
-         <textSummary>Monday March 30, 2026 at 20:02 MDT</textSummary>
+         <minute>04</minute>
+         <timeStamp>20260331200400</timeStamp>
+         <textSummary>Tuesday March 31, 2026 at 20:04 MDT</textSummary>
       </dateTime>
    </riseSet>
 </siteData>
