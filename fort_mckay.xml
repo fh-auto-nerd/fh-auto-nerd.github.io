@@ -4,20 +4,20 @@
    <dateTime name="xmlCreation" zone="UTC" UTCOffset="0">
       <year>2026</year>
       <month name="April">04</month>
-      <day name="Saturday">11</day>
+      <day name="Sunday">12</day>
       <hour>01</hour>
       <minute>05</minute>
-      <timeStamp>20260411010504</timeStamp>
-      <textSummary>Saturday April 11, 2026 at 01:05 UTC</textSummary>
+      <timeStamp>20260412010502</timeStamp>
+      <textSummary>Sunday April 12, 2026 at 01:05 UTC</textSummary>
    </dateTime>
    <dateTime name="xmlCreation" zone="MDT" UTCOffset="-6">
       <year>2026</year>
       <month name="April">04</month>
-      <day name="Friday">10</day>
+      <day name="Saturday">11</day>
       <hour>19</hour>
       <minute>05</minute>
-      <timeStamp>20260410190504</timeStamp>
-      <textSummary>Friday April 10, 2026 at 19:05 MDT</textSummary>
+      <timeStamp>20260411190502</timeStamp>
+      <textSummary>Saturday April 11, 2026 at 19:05 MDT</textSummary>
    </dateTime>
    <location>
       <continent>North America</continent>
@@ -32,32 +32,32 @@
       <dateTime name="observation" zone="UTC" UTCOffset="0">
          <year>2026</year>
          <month name="April">04</month>
-         <day name="Saturday">11</day>
+         <day name="Sunday">12</day>
          <hour>01</hour>
          <minute>00</minute>
-         <timeStamp>20260411010000</timeStamp>
-         <textSummary>Saturday April 11, 2026 at 01:00 UTC</textSummary>
+         <timeStamp>20260412010000</timeStamp>
+         <textSummary>Sunday April 12, 2026 at 01:00 UTC</textSummary>
       </dateTime>
       <dateTime name="observation" zone="MDT" UTCOffset="-6">
          <year>2026</year>
          <month name="April">04</month>
-         <day name="Friday">10</day>
+         <day name="Saturday">11</day>
          <hour>19</hour>
          <minute>00</minute>
-         <timeStamp>20260410190000</timeStamp>
-         <textSummary>Friday April 10, 2026 at 19:00 MDT</textSummary>
+         <timeStamp>20260411190000</timeStamp>
+         <textSummary>Saturday April 11, 2026 at 19:00 MDT</textSummary>
       </dateTime>
       <condition></condition>
       <iconCode format="gif"/>
-      <temperature unitType="metric" units="C" qaValue="100">4.0</temperature>
-      <dewpoint unitType="metric" units="C">-2.8</dewpoint>
-      <pressure unitType="metric" units="kPa" change="0.01" tendency="rising">101.7</pressure>
-      <relativeHumidity units="%" qaValue="100">61</relativeHumidity>
+      <temperature unitType="metric" units="C" qaValue="100">0.2</temperature>
+      <dewpoint unitType="metric" units="C">-1.0</dewpoint>
+      <pressure unitType="metric" units="kPa" change="0.02" tendency="falling">101.1</pressure>
+      <relativeHumidity units="%" qaValue="100">91</relativeHumidity>
       <wind>
-         <speed unitType="metric" units="km/h" qaValue="100">15</speed>
-         <gust unitType="metric" units="km/h" qaValue="100">27</gust>
+         <speed unitType="metric" units="km/h" qaValue="100">17</speed>
+         <gust unitType="metric" units="km/h"></gust>
          <direction qaValue="100">N</direction>
-         <bearing units="degrees" qaValue="100">2.6</bearing>
+         <bearing units="degrees" qaValue="100">2.8</bearing>
       </wind>
    </currentConditions>
    <forecastGroup>
@@ -75,38 +75,38 @@
       <dateTime name="sunrise" zone="UTC" UTCOffset="0">
          <year>2026</year>
          <month name="April">04</month>
-         <day name="Saturday">11</day>
+         <day name="Sunday">12</day>
          <hour>12</hour>
-         <minute>29</minute>
-         <timeStamp>20260411122900</timeStamp>
-         <textSummary>Saturday April 11, 2026 at 12:29 UTC</textSummary>
+         <minute>26</minute>
+         <timeStamp>20260412122600</timeStamp>
+         <textSummary>Sunday April 12, 2026 at 12:26 UTC</textSummary>
       </dateTime>
       <dateTime name="sunrise" zone="MDT" UTCOffset="-6">
          <year>2026</year>
          <month name="April">04</month>
-         <day name="Friday">10</day>
+         <day name="Saturday">11</day>
          <hour>06</hour>
-         <minute>32</minute>
-         <timeStamp>20260410063200</timeStamp>
-         <textSummary>Friday April 10, 2026 at 06:32 MDT</textSummary>
+         <minute>29</minute>
+         <timeStamp>20260411062900</timeStamp>
+         <textSummary>Saturday April 11, 2026 at 06:29 MDT</textSummary>
       </dateTime>
       <dateTime name="sunset" zone="UTC" UTCOffset="0">
          <year>2026</year>
          <month name="April">04</month>
-         <day name="Sunday">12</day>
+         <day name="Monday">13</day>
          <hour>02</hour>
-         <minute>28</minute>
-         <timeStamp>20260412022800</timeStamp>
-         <textSummary>Sunday April 12, 2026 at 02:28 UTC</textSummary>
+         <minute>30</minute>
+         <timeStamp>20260413023000</timeStamp>
+         <textSummary>Monday April 13, 2026 at 02:30 UTC</textSummary>
       </dateTime>
       <dateTime name="sunset" zone="MDT" UTCOffset="-6">
          <year>2026</year>
          <month name="April">04</month>
-         <day name="Friday">10</day>
+         <day name="Saturday">11</day>
          <hour>20</hour>
-         <minute>25</minute>
-         <timeStamp>20260410202500</timeStamp>
-         <textSummary>Friday April 10, 2026 at 20:25 MDT</textSummary>
+         <minute>28</minute>
+         <timeStamp>20260411202800</timeStamp>
+         <textSummary>Saturday April 11, 2026 at 20:28 MDT</textSummary>
       </dateTime>
    </riseSet>
 </siteData>
