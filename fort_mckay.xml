@@ -6,18 +6,18 @@
       <month name="November">11</month>
       <day name="Saturday">07</day>
       <hour>01</hour>
-      <minute>03</minute>
-      <timeStamp>20261107010315</timeStamp>
-      <textSummary>Saturday November 07, 2026 at 01:03 UTC</textSummary>
+      <minute>48</minute>
+      <timeStamp>20261107014851</timeStamp>
+      <textSummary>Saturday November 07, 2026 at 01:48 UTC</textSummary>
    </dateTime>
    <dateTime name="xmlCreation" zone="ABT" UTCOffset="-6">
       <year>2026</year>
       <month name="November">11</month>
       <day name="Friday">06</day>
       <hour>19</hour>
-      <minute>03</minute>
-      <timeStamp>20261106190315</timeStamp>
-      <textSummary>Friday November 06, 2026 at 19:03 ABT</textSummary>
+      <minute>48</minute>
+      <timeStamp>20261106194851</timeStamp>
+      <textSummary>Friday November 06, 2026 at 19:48 ABT</textSummary>
    </dateTime>
    <location>
       <continent>North America</continent>
@@ -64,20 +64,20 @@
       <dateTime name="forecastIssue" zone="UTC" UTCOffset="0">
          <year>2026</year>
          <month name="November">11</month>
-         <day name="Friday">06</day>
-         <hour>22</hour>
-         <minute>00</minute>
-         <timeStamp>20261106220000</timeStamp>
-         <textSummary>Friday November 06, 2026 at 22:00 UTC</textSummary>
+         <day name="Saturday">07</day>
+         <hour>01</hour>
+         <minute>46</minute>
+         <timeStamp>20261107014600</timeStamp>
+         <textSummary>Saturday November 07, 2026 at 01:46 UTC</textSummary>
       </dateTime>
       <dateTime name="forecastIssue" zone="ABT" UTCOffset="-6">
          <year>2026</year>
          <month name="November">11</month>
          <day name="Friday">06</day>
-         <hour>16</hour>
-         <minute>00</minute>
-         <timeStamp>20261106160000</timeStamp>
-         <textSummary>Friday November 06, 2026 at 16:00 ABT</textSummary>
+         <hour>19</hour>
+         <minute>46</minute>
+         <timeStamp>20261106194600</timeStamp>
+         <textSummary>Friday November 06, 2026 at 19:46 ABT</textSummary>
       </dateTime>
       <regionalNormals>
          <textSummary>Low minus 10. High minus 2.</textSummary>
@@ -86,34 +86,28 @@
       </regionalNormals>
       <forecast>
          <period textForecastName="Tonight">Friday night</period>
-         <textSummary>Cloudy. 30 percent chance of showers early this evening. Periods of rain beginning overnight. Wind southwest 20 km/h gusting to 40 becoming light this evening. Wind becoming west 20 gusting to 40 overnight. Low plus 2.</textSummary>
+         <textSummary>Increasing cloudiness. Periods of rain beginning overnight. Wind becoming west 20 km/h gusting to 40 overnight. Low plus 2.</textSummary>
          <cloudPrecip>
-            <textSummary>Cloudy. 30 percent chance of showers early this evening. Periods of rain beginning overnight.</textSummary>
+            <textSummary>Increasing cloudiness. Periods of rain beginning overnight.</textSummary>
          </cloudPrecip>
          <abbreviatedForecast>
             <iconCode format="gif">12</iconCode>
-            <pop units="%">30</pop>
-            <textSummary>Chance of showers</textSummary>
+            <pop units="%"></pop>
+            <textSummary>Periods of rain</textSummary>
          </abbreviatedForecast>
          <temperatures>
             <textSummary>Low plus 2.</textSummary>
             <temperature unitType="metric" units="C" class="low">2</temperature>
          </temperatures>
          <winds>
-            <textSummary>Wind southwest 20 km/h gusting to 40 becoming light this evening. Wind becoming west 20 gusting to 40 overnight.</textSummary>
+            <textSummary>Wind becoming west 20 km/h gusting to 40 overnight.</textSummary>
             <wind index="1" rank="major">
-               <speed unitType="metric" units="km/h">20</speed>
-               <gust unitType="metric" units="km/h">40</gust>
-               <direction>SW</direction>
-               <bearing units="degrees">22</bearing>
-            </wind>
-            <wind index="2" rank="major">
                <speed unitType="metric" units="km/h">15</speed>
                <gust unitType="metric" units="km/h">00</gust>
                <direction>SE</direction>
                <bearing units="degrees">14</bearing>
             </wind>
-            <wind index="3" rank="minor">
+            <wind index="2" rank="major">
                <speed unitType="metric" units="km/h">20</speed>
                <gust unitType="metric" units="km/h">40</gust>
                <direction>W</direction>
@@ -122,8 +116,7 @@
          </winds>
          <precipitation>
             <textSummary/>
-            <precipType start="22" end="27">rain</precipType>
-            <precipType start="33" end="36">rain</precipType>
+            <precipType start="9" end="12">rain</precipType>
          </precipitation>
          <snowLevel/>
          <windChill/>
@@ -156,7 +149,7 @@
          </winds>
          <precipitation>
             <textSummary>Local amount 5 mm.</textSummary>
-            <precipType start="36" end="45">rain</precipType>
+            <precipType start="12" end="21">rain</precipType>
             <accumulation>
                <name>rain</name>
                <amount unitType="metric" units="mm">5</amount>
@@ -422,37 +415,37 @@
       <dateTime name="forecastIssue" zone="UTC" UTCOffset="0">
          <year>2026</year>
          <month name="November">11</month>
-         <day name="Friday">06</day>
-         <hour>22</hour>
-         <minute>00</minute>
-         <timeStamp>20261106220000</timeStamp>
-         <textSummary>Friday November 06, 2026 at 22:00 UTC</textSummary>
+         <day name="Saturday">07</day>
+         <hour>01</hour>
+         <minute>46</minute>
+         <timeStamp>20261107014600</timeStamp>
+         <textSummary>Saturday November 07, 2026 at 01:46 UTC</textSummary>
       </dateTime>
       <dateTime name="forecastIssue" zone="ABT" UTCOffset="-6">
          <year>2026</year>
          <month name="November">11</month>
          <day name="Friday">06</day>
-         <hour>16</hour>
-         <minute>00</minute>
-         <timeStamp>20261106160000</timeStamp>
-         <textSummary>Friday November 06, 2026 at 16:00 ABT</textSummary>
+         <hour>19</hour>
+         <minute>46</minute>
+         <timeStamp>20261106194600</timeStamp>
+         <textSummary>Friday November 06, 2026 at 19:46 ABT</textSummary>
       </dateTime>
       <hourlyForecast dateTimeUTC="202611070200">
-         <condition>Chance of showers</condition>
-         <iconCode format="png">12</iconCode>
+         <condition>A few clouds</condition>
+         <iconCode format="png">31</iconCode>
          <temperature unitType="metric" units="C">7</temperature>
-         <lop category="Low" units="%">30</lop>
+         <lop category="Nil" units="%">0</lop>
          <windChill unitType="metric"/>
          <humidex unitType="metric"/>
          <wind>
-            <speed unitType="metric" units="km/h">20</speed>
-            <direction windDirFull="Southwest">SW</direction>
-            <gust unitType="metric" units="km/h">40</gust>
+            <speed unitType="metric" units="km/h">15</speed>
+            <direction windDirFull="Southeast">SE</direction>
+            <gust unitType="metric" units="km/h"/>
          </wind>
       </hourlyForecast>
       <hourlyForecast dateTimeUTC="202611070300">
-         <condition>Cloudy</condition>
-         <iconCode format="png">10</iconCode>
+         <condition>Partly cloudy</condition>
+         <iconCode format="png">32</iconCode>
          <temperature unitType="metric" units="C">6</temperature>
          <lop category="Nil" units="%">0</lop>
          <windChill unitType="metric"/>
@@ -464,8 +457,8 @@
          </wind>
       </hourlyForecast>
       <hourlyForecast dateTimeUTC="202611070400">
-         <condition>Cloudy</condition>
-         <iconCode format="png">10</iconCode>
+         <condition>Partly cloudy</condition>
+         <iconCode format="png">32</iconCode>
          <temperature unitType="metric" units="C">5</temperature>
          <lop category="Nil" units="%">0</lop>
          <windChill unitType="metric"/>
@@ -477,8 +470,8 @@
          </wind>
       </hourlyForecast>
       <hourlyForecast dateTimeUTC="202611070500">
-         <condition>Cloudy</condition>
-         <iconCode format="png">10</iconCode>
+         <condition>Partly cloudy</condition>
+         <iconCode format="png">32</iconCode>
          <temperature unitType="metric" units="C">5</temperature>
          <lop category="Nil" units="%">0</lop>
          <windChill unitType="metric"/>
